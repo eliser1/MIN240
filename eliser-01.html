@@ -5,23 +5,33 @@
     <title>Elise R Lab 1</title>
     <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps" rel="stylesheet">
   <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
   body {
     background-color: #ffdae9;
     color: #5d89ba;
     font-family: 'Oleo Script Swash Caps', cursive;
-    position: absolute;
+    position: relative;
     overflow: hidden;
+    margin-top: 2vh;
+  }
+  .wrapper {
+    width: 100vw;
+    text-align: center;
+  }
+  h1 {
+    font-size: 10vw;
+    line-height: 25vh;
   }
   #top {
     width: 90vw;
     height: 25vh;
-    font-size: 10vw;
     text-align: center;
     border: 5px #5d89ba solid;
     border-radius: 10px;
-    margin: 0;
-    vertical-align: 25vh;
-    line-height: 25vh;
+    margin: auto;
   }
   #row {
     display: flex;
@@ -42,7 +52,7 @@
     height: 40vh;
     top: 45vh;
     left: auto;
-    margin: 2vw;
+    margin: auto;
     z-index: 0;
     background-size: cover;
     background-image: url(https://purewows3.imgix.net/images/articles/2014_12/Cozy_bed_400.jpg?auto=format,compress&cs=strip);
@@ -107,7 +117,7 @@
   </style>
 </head>
   <body>
-  <div id="top">Elise's Favorites</div>
+  <div class="wrapper"><h1 id="top">Elise's Favorites</h1></div>
   <div id="row">
     <div id="youtube"><iframe src="https://www.youtube.com/embed/70W0u35wa48" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
     <div id="yp">so good!</div>
