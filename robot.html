@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    @keyframes fadeIN {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+      #robot {
+        position: absolute;
+        top: 25vmin;
+        left: 25vmin;
+        width: 50vmin;
+        height: 50vmin;
+        border: 1px solid gray;
+        animation: fadeIN 5s;
+      }
+      #lightning {
+        position: absolute;
+        width: 20%;
+        height: 20%;
+        top: 15%;
+        left: 40%;
+        background-color: hsl(50, 80%, 80%);
+        clip-path: polygon(0 0, 70% 40%, 40% 40%, 100% 100%, 0 30%, 30% 30%);
+      }
+      #hair {
+        position: absolute;
+        width: 10%;
+        height: 10%;
+        top: 40%;
+        left: 45%;
+        transform: rotate(45deg);
+        background-color: black;
+      }
+      #head {
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        width: 50%;
+        height: 30%;
+        border-radius: 10%;
+        background-color: black;
+      }
+      #eye {
+        top: 55%;
+        left: 35%;
+        width: 30%;
+        height: 20%;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 50%;
+        position: absolute;
+      }
+      #pupil {
+        position: absolute;
+        top: 65%;
+        left: 45%;
+        width: 10%;
+        height: 10%;
+        background-color: black;
+        border-radius: 50%;
+      }
+      #larm {
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        width: 20%;
+        height: 10%;
+        /* background-color: hsl(160, 70%, 70%); */
+        transform: skewX(-35deg);
+        /* z-index: -1; */
+      }
+      #rarm {
+        position: absolute;
+        top: 65%;
+        left: 75%;
+        width: 20%;
+        height: 10%;
+        /* background-color: hsl(160, 70%, 70%); */
+        transform: skew(35deg);
+        /* z-index: -1; */
+      }
+      #legs {
+        position: absolute;
+        top: 76%;
+        left: 25%;
+        width: 50%;
+        height: 20%;
+        transform: perspective(2em)rotateX(10deg);
+      }
+      .accent {
+      z-index: -1;
+      border: 2px solid hsl(160, 70%, 70%);
+      background-image: linear-gradient(hsl(160, 70%, 70%), white);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="robot">
+    <div id="lightning"></div>
+    <div id="hair"></div>
+    <div id="head"></div>
+    <div id="eye"></div>
+    <div id="pupil"></div>
+    <div id="larm" class="accent" ></div>
+    <div id="rarm" class="accent"></div>
+    <div id="legs" class="accent"></div>
+    </div>
+  </body>
+</html>
