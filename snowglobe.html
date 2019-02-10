@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    @keyframes jumpUP{
+      from {transform: translateY(0);}
+      to {transform: translateY(-15vmin);}
+    }
+    @keyframes jumpDOWN{
+      from {transform: translateY(-15vmin);}
+      to {transform: translateY(0);}
+    }
+    @keyframes squash{
+      from {transform: scaleY(1);}
+      50% {transform: scaleY(0.8) translateY(2vmin);}
+      to {transform: scaleY(1.1) translateY(0);}
+    }
+    @keyframes stretch{
+      from {transform: scaleY(1.1) translateY(0);}
+      to {transform: scaleY(1) translateY(-15vmin);}
+    }
+    @keyframes comeDOWN{
+      from {transform: scaleY(1) translateY(-15vmin);}
+      50% {transform: scaleY(1) translateY(0);}
+      to {transform: scaleY(1) translateY(0);}
+    }
+    @keyframes prepare{
+      from {transform: translateY(0);}
+      50% {transform: translateY(3vmin);}
+      to {transform: translateY(0);}
+    }
+    @keyframes hatFALL{
+      from {transform: scaleY(1) translateY(-15vmin);}
+      50% {transform: scaleY(1) translateY(0);}
+      to {transform: scaleY(1) translateY(0);}
+    }
+    @keyframes blink{
+      from {transform: scaleY(1);}
+      50% {transform: scaleY(0);}
+      to {transform: scaleY(1);}
+    }
+    @keyframes squashRETURN {
+      from {transform: scaleY(1);}
+      50% {transform: scaleY(0.8);}
+      to {transform: scaleY(1);}
+    }
+    #snowglobe{
+      position: relative;
+      top: 12.5vmin;
+      left: 12.5vmin;
+      width: 75vmin;
+      height: 75vmin;
+      border: 2px solid black;
+      overflow: hidden;
+    }
+    #base{
+      position: absolute;
+      top: 76%;
+      left: 25%;
+      width: 50%;
+      height: 20%;
+      transform: perspective(2em)rotateX(10deg);
+      background-image: linear-gradient(black, gray);
+      z-index: 100;
+    }
+    #globe{
+      position: absolute;
+      top: 8%;
+      left: 12%;
+      width: 75%;
+      height: 75%;
+      border: 2px solid black;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: hsl(199, 78%, 89%);
+    }
+    #tree1{
+      clip-path: polygon(50% 5%, 77.5% 45%, 60% 45%, 85% 85%, 57.5% 85%, 57.5% 100%, 42.5% 100%, 42.5% 85%, 15% 85%, 40% 45%, 22.5% 45%, 50% 5%);
+      background: rgb(21,94,30);
+      background: linear-gradient(0deg, rgba(21,94,30,1) 0%, rgba(21,94,30,1) 55%, rgba(255,255,255,1) 100%);
+      position: absolute;
+      top: 10%;
+      left: 7.5%;
+      width: 85%;
+      height: 85%;
+      z-index: 0;
+    }
+    #tree2{
+      clip-path: polygon(50% 5%, 77.5% 45%, 60% 45%, 85% 85%, 57.5% 85%, 57.5% 100%, 42.5% 100%, 42.5% 85%, 15% 85%, 40% 45%, 22.5% 45%, 50% 5%);
+      background: rgb(62,148,73);
+      background: linear-gradient(0deg, rgba(62,148,73,1) 0%, rgba(62,148,73,1) 55%, rgba(255,255,255,1) 100%);
+      position: absolute;
+      top: 45%;
+      left: 10%;
+      width: 50%;
+      height: 50%;
+      z-index: 0;
+    }
+    #tree3{
+      clip-path: polygon(50% 5%, 77.5% 45%, 60% 45%, 85% 85%, 57.5% 85%, 57.5% 100%, 42.5% 100%, 42.5% 85%, 15% 85%, 40% 45%, 22.5% 45%, 50% 5%);
+      background: rgb(62,148,73);
+      background: linear-gradient(0deg, rgba(62,148,73,1) 0%, rgba(62,148,73,1) 55%, rgba(255,255,255,1) 100%);
+      position: absolute;
+      top: 45%;
+      left: 40%;
+      width: 50%;
+      height: 50%;
+      z-index: 0;
+    }
+    #snow1{
+      position: absolute;
+      top: 68%;
+      left: 37.5%;
+      width: 25%;
+      height: 25%;
+      border: 2px solid black;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: white;
+      animation: squash 2s,
+      stretch 5s 1.5s,
+      comeDOWN 5s 6.5s,
+      squashRETURN 2s 8.5s;
+    }
+    #snow2{
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      width: 20%;
+      height: 20%;
+      border: 2px solid black;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: white;
+      animation: prepare 2s,
+      stretch 5s 1.5s,
+      comeDOWN 7s 6.5s,
+      squashRETURN 2s 9.5s;
+    }
+    #snow3{
+      position: absolute;
+      top: 37.5%;
+      left: 42.5%;
+      width: 15%;
+      height: 15%;
+      border: 2px solid black;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: white;
+      animation: prepare 2s,
+      stretch 5s 1.5s,
+      comeDOWN 9s 6.5s,
+      squashRETURN 2s 10.5s;
+    }
+    #eye1 {
+      top: 42.5%;
+      left: 46%;
+     }
+    #eye2 {
+      top: 42.5%;
+      left: 52.5%;
+    }
+    #hat {
+      clip-path: polygon(30% 12.5%, 70% 12.5%, 70% 40%, 90% 40%, 90% 60%, 10% 60%, 10% 40%, 30% 40%, 30% 12.5%);
+      background-color: black;
+      position: absolute;
+      width: 25%;
+      height: 25%;
+      top: 25%;
+      left: 37.5%;
+      z-index: 2;
+      animation: prepare 2s,
+      jumpUP 5s 1.5s,
+      hatFALL 11s 6.5s;
+    }
+    #scarf {
+      clip-path: polygon(2.5% 2.5%, 77.5% 2.5%, 77.5% 22.5%, 97.5% 60%, 77.5% 60%, 60% 22.5%, 2.5% 22.5%, 2.5% 2.5%);
+      background-color: hsl(0, 75%, 50%);
+      width: 25%;
+      height: 25%;
+      top: 50%;
+      left: 40%;
+      position: absolute;
+      z-index: 2;
+      filter: opacity(85%);
+      animation: prepare 2s,
+      jumpUP 5s 1.5s,
+      comeDOWN 7s 6.5s;
+    }
+    #nose {
+      clip-path: polygon(20% 10%, 80% 10%, 20% 40%, 20% 10%);
+      background-color: hsl(35, 100%, 50%);
+      position: absolute;
+      width: 10%;
+      height: 10%;
+      top: 45%;
+      left: 47.5%;
+      z-index: 2;
+      animation: prepare 2s,
+      jumpUP 5s 1.5s,
+      comeDOWN 9s 6.5s;
+    }
+    #button1 {
+      top: 57.5%;
+      left: 50%;
+    }
+    #button2 {
+      top: 61%;
+      left: 50%;
+    }
+    #button3 {
+      top: 64.5%;
+      left: 50%;
+    }
+    .eye {
+      position: absolute;
+      width: 2.5%;
+      height: 2.5%;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: black;
+      animation: prepare 2s,
+      jumpUP 5s 1.5s,
+      comeDOWN 9s 6.5s,
+      blink 2s 11.5s 2;
+    }
+    .button {
+      position: absolute;
+      width: 2.5%;
+      height: 2.5%;
+      border-radius: 50%;
+      z-index: 1;
+      background-color: black;
+      animation: prepare 2s,
+      jumpUP 5s 1.5s,
+      comeDOWN 7s 6.5s;
+    }
+     </style>
+  </head>
+  <body>
+  <div id="snowglobe">
+    <div id="base"></div>
+  <div id="globe">
+    <div id="tree1"></div>
+    <div id="tree2"></div>
+    <div id="tree3"></div>
+    <div id="snow1"></div>
+    <div id="snow2"> </div>
+    <div id="snow3"></div>
+    <div class="button" id="button1"></div>
+    <div class="button" id="button2"></div>
+    <div class="button" id="button3"></div>
+    <div class="eye" id="eye1"></div>
+    <div class="eye" id="eye2"></div>
+    <div id="hat"></div>
+    <div id="scarf"></div>
+    <div id="nose"></div>
+  </div>
+</div>
+  </body>
+</html>
