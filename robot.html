@@ -8,14 +8,66 @@
       from {opacity: 0;}
       to {opacity: 1;}
     }
+    @keyframes blinking {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes updown {
+      from {transform: translateY(0);}
+      50% {transform: translateY(-10%);}
+      to {transform: translateY(0);}
+    }
+    @keyframes closeEYE {
+      from {transform: scaleY(1);}
+      50% {transform: scaleY(0);}
+      to {transform: scaleY(1);}
+    }
+    @keyframes wing01 {
+      from {transform: rotateZ(10deg) skewX(-35deg);}
+      50% {transform: rotateZ(-10deg) skewX(-35deg);}
+      to {transform: rotateZ(10deg) skewX(-35deg);}
+    }
+    @keyframes wing02 {
+      from {transform: rotateZ(-10deg) skewX(35deg);}
+      50% {transform: rotateZ(10deg) skewX(35deg);}
+      to {transform: rotateZ(-10deg) skewX(35deg);}
+    }
+    /* skewX disregarded by tranform in animation, so must reiterate */
+    @keyframes jumpingUP {
+      from {transform: scaleY(0.8) translateY(0);}
+      to {transform: scaleY(1.1) translateY(-20vmin);}
+    }
+    @keyframes jumpingDOWN {
+      from {transform: scaleY(1.1) translateY(-20vmin);}
+      to {transform: scaleY(1) translateY(0);}
+    }
+    @keyframes squeezeDOWN {
+      from {transform: scaleY(1);}
+      to {transform: scaleY(0.8);}
+    }
+    @keyframes squeezeDOWN2 {
+      from {transform: scaleY(1);}
+      50% {transform: scaleY(0.8);}
+      to {transform: scaleY(1);}
+    }
       #robot {
         position: absolute;
+        overflow: hidden;
         top: 25vmin;
         left: 25vmin;
         width: 50vmin;
         height: 50vmin;
+        border-radius: 50%;
         border: 1px solid gray;
-        animation: fadeIN 5s;
+        transform-origin: bottom;
+        animation: fadeIN 5s,
+        squeezeDOWN 0.5s 2s,
+        jumpingUP 2s ease-out 2.5s,
+        jumpingDOWN 2s ease-in 4.5s,
+        squeezeDOWN2 1s 6.5s;
+        /* ease-in-out slows in and out acceleration */
+        /* use the second 2s to specify a delay */
+        /* when using two animations on one thing, separate with comma */
       }
       #lightning {
         position: absolute;
@@ -25,6 +77,7 @@
         left: 40%;
         background-color: hsl(50, 80%, 80%);
         clip-path: polygon(0 0, 70% 40%, 40% 40%, 100% 100%, 0 30%, 30% 30%);
+        animation: blinking 1s infinite;
       }
       #hair {
         position: absolute;
@@ -43,6 +96,7 @@
         height: 30%;
         border-radius: 10%;
         background-color: black;
+        animation: updown 2s infinite;
       }
       #eye {
         top: 55%;
@@ -53,6 +107,7 @@
         border: 2px solid black;
         border-radius: 50%;
         position: absolute;
+        animation: closeEYE 2s infinite;
       }
       #pupil {
         position: absolute;
@@ -72,6 +127,8 @@
         /* background-color: hsl(160, 70%, 70%); */
         transform: skewX(-35deg);
         /* z-index: -1; */
+        animation: wing01 1s infinite;
+        transform-origin: right top;
       }
       #rarm {
         position: absolute;
@@ -82,6 +139,8 @@
         /* background-color: hsl(160, 70%, 70%); */
         transform: skew(35deg);
         /* z-index: -1; */
+        animation: wing02 1s infinite;
+        transform-origin: left top;
       }
       #legs {
         position: absolute;
