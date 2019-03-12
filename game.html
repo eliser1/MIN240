@@ -6,7 +6,7 @@
   <style>
     #startScreen{
       background-color: grey;
-      position: absolute;
+      position: relative;
       top: 30vh;
       left: 10vw;
       width: 80vw;
@@ -27,6 +27,12 @@
       text-align: center;
       line-height: 15vh;
     }
+    #wireframe{
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      text-align: center;
+    }
     #gameScreen{
       background: linear-gradient(0deg, rgba(83,195,64,1) 0%, rgba(169,226,232,1) 20%);
       position: relative;
@@ -38,6 +44,7 @@
       text-align: center;
       font-size: 2em;
       user-select: none;
+      overflow: hidden;
     }
     #strawberries{
       position: absolute;
@@ -80,8 +87,6 @@
     }
     #escape{
       position: absolute;
-      background-color: red;
-      border-radius: 50%;
       cursor: pointer;
       left: 95%;
       top: 2.5%;
@@ -93,7 +98,7 @@
     }
     #endScreen{
       background-color: rgba(169,226,232,1);
-      position: absolute;
+      position: relative;
       top: 30vh;
       left: 10vw;
       width: 80vw;
@@ -103,10 +108,21 @@
       text-align: center;
       user-select: none;
     }
+    #replay{
+      position: absolute;
+      background-color: rgba(83,195,64,1);
+      top: 75%;
+      left: 75%;
+      height: 20%;
+      width: 20%;
+      cursor: pointer;
+    }
   </style>
   <body>
       <div id="startScreen">Welcome to my Garden! Click the watering can to make the fruit grow.
       <div id="startButton">Start Game</div>
+      <p><a id="wireframe" href="game.png">View wireframe here!
+      </a></p>
       </div>
       <div id="gameScreen">I just wish I could be big!
       <div id="faces">
@@ -120,8 +136,7 @@
       <img id="water" src="water.png"></img>
       </div>
       <div id="endScreen">Thanks for helping me grow!
-      <p><a class="wireframe"href="game.png">View wireframe here!
-      </a></p>
+      <div id="replay">replay</div>
       </div>
     <script>
 
@@ -163,6 +178,9 @@
 
     var mySad
     = document.querySelector("#sad");
+
+    var myReplay
+    = document.querySelector("#replay");
 
     myStartButton.addEventListener("click", playGame, false);
 
@@ -213,6 +231,12 @@
     function endGame() {
     myGameScreen.style.display = "none";
     myEndScreen.style.display = "block";
+    }
+
+    myReplay.addEventListener("click", replay, false);
+
+    function replay() {
+      location.reload();
     }
 
     </script>
