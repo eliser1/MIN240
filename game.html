@@ -81,7 +81,7 @@
       width: 25%;
       display: none;
     }
-    .material-icons{
+    #escape{
       position: absolute;
       background-color: red;
       border-radius: 50%;
@@ -110,19 +110,17 @@
       </div>
       <div id="gameScreen">I just wish I could be big!
       <div id="faces">
-      <img id="strawberries" src="strawberry.png"></img>
-      <img class="face" id="happy" src="happystraw.png">
-      <img class="face" id="meh" src="mehstraw.png">
-      <img class="face" id="sad" src="sadstraw.png">
+      <img id="strawberries" src="strawberry.svg"></img>
+      <img class="face" id="happy" src="happystraw.svg">
+      <img class="face" id="meh" src="mehstraw.svg">
+      <img class="face" id="sad" src="sadstraw.svg">
       </div>
-      <i class="material-icons">
-  close
-  </i>
-      <img id="wateringCan" src="wateringcan.png">
-      <img id="water" src="water.png">
+      <div class="escape">x</div>
+      <img id="wateringCan" src="wateringcan.svg">
+      <img id="water" src="water.svg">
       </div>
       <div id="endScreen">Thanks for helping me grow!
-      <p><a class="wireframe"href="game.png">View wireframe here!
+      <p><a class="wireframe"href="./game.png">View wireframe here!
       </a></p>
       </div>
     <script>
@@ -155,7 +153,7 @@
     = document.querySelector("#endScreen");
 
     var myEscape
-    = document.querySelector(".material-icons");
+    = document.querySelector("#escape");
 
     var myHappy
     = document.querySelector("#happy");
