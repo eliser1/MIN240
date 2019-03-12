@@ -112,7 +112,7 @@
       <img class="face" id="meh" src="mehstraw.png"></img>
       <img class="face" id="sad" src="sadstraw.png"></img>
       </div>
-      <div class="escape">x</div>
+      <div class="escape"></div>
       <img id="wateringCan" src="wateringcan.png"></img>
       <img id="water" src="water.png"></img>
       </div>
@@ -206,6 +206,7 @@
       myWater.style.display = "none";
     }
     myEscape.addEventListener("click", endGame, false);
+    myEscape.innerHTML = "x";
 
     function endGame() {
     myGameScreen.style.display = "none";
