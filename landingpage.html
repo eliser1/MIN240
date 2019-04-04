@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Landing Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <style>
+body {
+  background-color: antiquewhite;
+  font-family: 'Raleway', sans-serif;
+  color: #4e4656;
+}
+#top {
+  height: 100vh;
+  margin: 0 auto;
+}
+#slideshow {
+  /* should show image, then on click adjust the image to be the next */
+  background-image: url("chair.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.toptext {
+  text-align: center;
+  color: #4e4656;
+  z-index: 1;
+  text-shadow:
+   1px  1px     #fff,
+  -1px  1px     #fff,
+   1px -1px     #fff,
+  -1px -1px     #fff,
+   1px  1px 5px #555;
+}
+h1 {
+  text-align: center;
+  font-size: 4em;
+}
+img {
+  width: 25vw;
+  height: 25vw;
+  position: relative;
+}
+
+#vol{
+  position: absolute;
+  left: 32.8125vw;
+}
+#res{
+  position: absolute;
+  left: 68.75vw;
+}
+.card-header {
+  background-color: #A596B5;
+  text-align: center;
+  border: solid 1px antiquewhite;
+  padding: 1%;
+  width: 100%;
+}
+.card-link {
+  color: antiquewhite;
+}
+.card-link:hover {
+  color: antiquewhite;
+}
+.card-header:hover {
+  background-color: #80758c;
+}
+#description {
+  background-color: #A596B5;
+  color: antiquewhite;
+  padding: 2.5%;
+}
+#iinfo {
+  background-image: url("ideation.jpg");
+  height: 50vh;
+  margin-left: 25%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  align-content: center;
+}
+  </style>
+  <body>
+    <div id="top">
+      <div id="slideshow">
+      <h1 id="title" class="toptext">RESIDENTS</h1>
+      <h2 id="descrip" class="toptext">a new way to connect generations</h2>
+    </div>
+    </div>
+    <div id="middle">
+      <div id="description">Residents is a free service that helps connect users to nursing homes around the area. This service acts as the third party between potential visitors and the nursing homes, and can help to ease the process of visiting. With visiting hours, location-based searching, and information about residents, Residents hopes to bring generations together and reduce the risk of nursing home related depression.</div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4">
+              <a class="btn btn-link" role="button" data-toggle="collapse" data-target="#hinfo" aria-expanded="false" aria-controls="hinfo">
+                  <img src="home.svg" class="figure-img img-fluid rounded">
+              </a>
+            </div>
+            <div class="col-sm-4">
+              <a class="btn btn-link" role="button" data-toggle="collapse" data-target="#volinfo" aria-expanded="false" aria-controls="volinfo">
+                  <img src="volunteer.svg" class="figure-img img-fluid rounded">
+                </a>
+            </div>
+            <div class="col-sm-4 ">
+              <a class="btn btn-link" role="button" data-toggle="collapse" data-target="#resinfo" aria-expanded="false" aria-controls="resinfo">
+                  <img src="residents.svg" class="figure-img img-fluid rounded">
+              </a>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="collapse multi-collapse" id="hinfo">
+                  <div class="card card-body">
+                    The home page shows our mission statement, as well as small snippets of interviews. You can see bits and pieces of the other pages here, in a previewed form.
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="collapse multi-collapse" id="volinfo">
+                  <div class="card card-body">
+                    Here, users are able to sign up to volunteer at certain homes. They will be able to find homes by location, and see their visiting hours. They will be able to set up a time to volunteer here.
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="collapse multi-collapse" id="resinfo">
+                  <div class="card card-body">
+                    The user will be able to view information on residents at the home they chose, or on any resident at homes in the area. This will show them things like favorite music, favorite game, and favorite snack, to ensure both parties enjoy their time together.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    <div class="container">
+      <h1>Design Process</h1>
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#rinfo">
+              Research
+            </a>
+          </div>
+          <div id="rinfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              To conduct my research, I interviewed five separate people. All of them have had some experience working in a nursing home, and were able to provide insight on the affect of loneliness. I also have my own experience from when I would visit my grandparents in their nursing home.
+              The interviews went as follows.
+              <ol class="interviewee">
+                <li>Molly</li>
+                  <ul>
+                    <li>Me: How long did you work there?</li>
+                    <li>Her: Maybe 9 months.</li>
+                    <li>Me: During your time there, about how many of the residents had consistent visitors?</li>
+                    <li>Her: It was a long time ago, but not a huge number.</li>
+                    <li>Me: Was it better around the holidays?</li>
+                    <li>Her: There was an uptick around the holidays.</li>
+                    <li>Me: Do you think they could have benefitted from spending time with more people?</li>
+                    <li>Her: Probably, they would come visit with me at the desk or socialize with each other. It was a combo retirement home/assisted living/nursing facility.</li>
+                  </ul>
+                <li>Chrysta</li>
+                  <ul>
+                    <li>Me: How long did you work there?</li>
+                    <li>Her: About a year.</li>
+                    <li>Me: During your time there, about how many of the residents had consistent visitors?</li>
+                    <li>Her: That I know of, out of the 20 or so residents who I was very familiar with only about 6 or 7 had consistent visitors. A lot of the residents don’t come to the dining hall. The dementia floor got even less visitors and they had maybe 30 or so residents.</li>
+                    <li>Me: Was it better around the holidays?</li>
+                    <li>Her: Holidays to me seemed good, but I mostly saw older people who were still capable of getting things done on their own. Families came more with grandkids or great grandkids. The nursing home always did something special every holiday, and different occasions to keep everyone’s minds occupied and still make them feel loved and special.</li>
+                    <li>Me: Do you think they could have benefitted from spending time with more people?</li>
+                    <li>Her: Yes definitely. Schools in the area often came with the students who made cards and they would have dessert in the dining room and play games. The residents always had a great time from what I can tell. The nursing home I worked at also did “senior” prom dances and picnics, movie nights, talent shows, and different actives like that where family and friends can come too. Those were always a big hit. You can always tell when someone hasn’t gone a visit in a while though. Their overall mood changes and they’re so sad they won’t come down for meals or finish their meals.</li>
+                  </ul>
+                <li>Johanna</li>
+                  <ul>
+                    <li>Me: How long did you work there?</li>
+                    <li>Her: I worked there about 10 months.</li>
+                    <li>Me: During your time there, about how many of the residents had consistent visitors?</li>
+                    <li>Her: Honestly they didn’t have a lot of visitors. A couple would have family come over but it never happened that often. There were 6/7 people in the house.</li>
+                    <li>Me: Was it better around the holidays?</li>
+                    <li>Her: Some of my residents would go home and spend either a day or a couple days with family. Honestly if they didn’t go home they wouldn’t have anyone visit them.</li>
+                    <li>Me: Do you think they could have benefitted from spending time with more people?</li>
+                    <li>Her: Oh most definitely. They would always about how they miss their family or how they just want someone to come see them or even want to see them.</li>
+                  </ul>
+                <li>Katie</li>
+                  <ul>
+                    <li>Me: How long did you work there?</li>
+                    <li>Her: A few months.</li>
+                    <li>Me: During your time there, about how many of the residents had consistent visitors?</li>
+                    <li>Her: Honestly not many. I would say less than 50 and it was a bigger facility. They would have either be confined to their rooms when it wasn’t a meal time or pushed in wheel chairs and put in a big round area in the hallway. It was incredibly sad and depressing</li>
+                    <li>Me: Do you think they could have benefitted from spending time with more people?</li>
+                    <li>Her: Oh definitely. Moral would have been so much higher and I their lives would have been prolonged greatly. I think their depression and low attitudes rubbed off onto the staff as well. We had a very high employment turn around rate and I think it was bc of the environment honestly</li>
+                  </ul>
+                <li>Andrew</li>
+                  <ul>
+                    <li>Me: How long did you work there?</li>
+                    <li>Him: A summer.</li>
+                    <li>Me: During your time there, about how many of the residents had consistent visitors?</li>
+                    <li>Him: Honestly, I worked in a dining room. Even there, I only saw about 4 families visit. They were a rather wealthy home as well. 4 consistently.</li>
+                    <li>Me: Do you think they could have benefitted from spending time with more people?</li>
+                    <li>Him: Absolutely. In my opinion, they were more prone to depression when they went long whiles without visitors. They wouldn’t eat, barely leave their rooms, interact with other residents, or even carry on a conversation. When people got visitors, they would be completely different people. They would laugh and smile at everything, tell stories, and really thrive. I think it’s the most important thing to their mental, and consequently sometimes, their physical health.</li>
+                  </ul>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#binfo">
+              Brainstorming
+            </a>
+          </div>
+          <div id="binfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              <ol>
+                <li>Insight</li>
+                  <ul>
+                    <li>Theme: loneliness</li>
+                      <ol>
+                      <li>Need human interaction</li>
+                      <li>Elderly receive less visitors</li>
+                      <li>Boost morale</li>
+                      </ol>
+                  </ul>
+                  <ul>
+                    <li>Theme: accessibility</li>
+                      <ol>
+                      <li>Need an easier way to help others</li>
+                      <li>If it was easier, people may visit more often</li>
+                      <li>Having information accessible can help make the most of each visit</li>
+                      </ol>
+                  </ul>
+                <li>How Might We?</li>
+                <ul>
+                  <li>How might we help connect generations?</li>
+                  <li>How might we help bring company to those who are alone?</li>
+                  <li>How might we make visiting easier?</li>
+                </ul>
+              </ol>
+
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#iinfo">
+              Ideation
+            </a>
+          </div>
+          <div id="iinfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#winfo">
+              Wireframe
+            </a>
+          </div>
+          <div id="winfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Wireframe Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#ginfo">
+             Graphic
+            </a>
+          </div>
+          <div id="ginfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Graphic Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="card-link" data-toggle="collapse" href="#pinfo">
+              Pitch
+            </a>
+          </div>
+          <div id="pinfo" class="collapse" data-parent="#accordion">
+            <div class="card-body">
+              Pitch Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+
+    var mySlideshow
+    = document.querySelector("#slideshow");
+
+    var pic
+    = 1;
+
+    mySlideshow.addEventListener("click", changePic, false);
+
+    function changePic() {
+      pic++;
+      if (pic==1) {
+        mySlideshow.style.backgroundImage = "url('chair.jpg')";
+      }
+      if (pic==2) {
+        mySlideshow.style.backgroundImage = "url('chess.jpg')";
+      }
+      if (pic==3) {
+        mySlideshow.style.backgroundImage = "url('smile.jpg')";
+        pic=0;
+      }
+    }
+
+    </script>
+  </body>
+</html>
