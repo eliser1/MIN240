@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <style>
+  body {
+    background-color: antiquewhite;
+    font-family: 'Raleway', sans-serif;
+    color: #4e4656;
+  }
+  #top {
+    height: 100vh;
+    margin: 0 auto;
+  }
+  #slideshow {
+    background-image: url("chair.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  .toptext {
+    text-align: center;
+    color: #4e4656;
+    z-index: 1;
+    text-shadow:
+     1px  1px     #fff,
+    -1px  1px     #fff,
+     1px -1px     #fff,
+    -1px -1px     #fff,
+     1px  1px 5px #555;
+  }
+  #middle {
+    text-align: center;
+    padding: 1%;
+    background-color: #4e4656;
+    color: antiquewhite;
+  }
+  #homedd {
+    display: none;
+    position: absolute;
+    margin: 2.5%;
+    height: 95%;
+    width: 95%;
+  }
+  #homephoto {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  #mission {
+    /* background-color: #A596B5; */
+    color: #4e4656;
+    padding: 2.5%;
+    text-align: center;
+    width: 100%;
+  }
+  #signup {
+    text-align: center;
+  }
+  .signup {
+    border: 2px solid #4e4656;
+    padding: 1%;
+    margin-top: 2.5%;
+    text-align: left;
+    color: #4e4656;
+    width: 100%;
+    background-color: antiquewhite;
+  }
+  .signin {
+    border: 2px solid #4e4656;
+    padding: 1%;
+    margin-top: 2.5%;
+    text-align: left;
+    color: #4e4656;
+    width: 100%;
+    background-color: antiquewhite;
+  }
+  #signupbtn {
+    text-align: center;
+    width: 175px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(78, 70, 86);
+  }
+  #signupbtn:hover {
+    background-color: #4e4656;
+    color: antiquewhite;
+    transition: 1s all;
+  }
+  #signinbtn {
+    text-align: center;
+    width: 175px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(78, 70, 86);
+  }
+  #signinbtn:hover {
+    background-color: #4e4656;
+    color: antiquewhite;
+    transition: 1s all;
+  }
+  #voldd {
+    display: none;
+  }
+  #resdd {
+    display: none;
+  }
+  </style>
+  <body>
+    <div id="top">
+      <div id="slideshow">
+      <h1 id="title" class="toptext">RESIDENTS</h1>
+      <h2 id="descrip" class="toptext">a new way to connect generations</h2>
+    </div>
+    </div>
+    <div id="middle">
+      Use the buttons below to help navigate through the pages!
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+              <img src="home.svg" id="home" class="figure-img img-fluid rounded">
+          </a>
+        </div>
+        <div class="col-sm-4">
+              <img src="volunteer.svg" id="vol" class="figure-img img-fluid rounded">
+            </a>
+        </div>
+        <div class="col-sm-4 ">
+              <img src="residents.svg" id="res" class="figure-img img-fluid rounded">
+          </a>
+        </div>
+        </div>
+      </div>
+    </div>
+      <div id="homedd" class="row">
+        <div id="lefthome" class="col-lg-6">
+          <img id="homephoto" class="col-12" src="home1.jpg">
+          <div id="mission" class="col-12">Residents is a free service that helps connect users to nursing homes around the area. This service acts as the third party between potential visitors and the nursing homes, and can help to ease the process of visiting. With visiting hours, location-based searching, and information about residents, Residents hopes to bring generations together and reduce the risk of nursing home related depression.</div>
+        </div>
+        <div id="signup" class="col-lg-6"> Sign up below!
+          <input id="first" class="signup" placeholder="first name">
+          <br><input id="last" class="signup" placeholder="last name">
+          <br><input id="bday" class="signup" placeholder="mm/dd/yy">
+          <br><input id="email" class="signup" placeholder="email">
+          <br><input id="pass" class="signup" placeholder="password">
+          <br><input id="conpass" class="signup" placeholder="confirm password">
+          <div id="signupbtn" class="signup">sign up</div>
+          <br><div id="signin">Already registered? Sign in below!</div>
+          <input id="emailIn" class="signin" placeholder="email">
+          <br><input id="passIn" class="signin" placeholder="password">
+          <div id="signinbtn" class="signin">sign in</div>
+        </div>
+      <div id="voldd">
+        Lorem ipsum dolor est
+      </div>
+      <div id="resdd">
+        Lorem ipsum dolor est
+      </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+
+    var mySlideshow
+    = document.querySelector("#slideshow");
+
+    var pic
+    = 1;
+
+    var picHome
+    = 1;
+
+    var homeDrop
+    = document.querySelector("#homedd");
+
+    var homeIcon
+    = document.querySelector("#home");
+
+    var volDrop
+    = document.querySelector("#voldd");
+
+    var volIcon
+    = document.querySelector("#vol");
+
+    var resDrop
+    = document.querySelector("#resdd");
+
+    var resIcon
+    = document.querySelector("#res");
+
+    var homeSlide
+    = document.querySelector("#homephoto");
+
+    var signUpBtn
+    = document.querySelector("#signupbtn");
+
+    mySlideshow.addEventListener("click", changePic, false);
+
+    homeSlide.addEventListener("click", changePicHome, false);
+
+    homeIcon.addEventListener("click", expandHome, false);
+
+    signUpBtn.addEventListener("click", alertThank, false);
+
+    function alertThank() {
+      alert("Thank you!")
+    }
+
+    function expandHome() {
+      homeDrop.style.display = "flex";
+      volDrop.style.display = "none";
+      resDrop.style.display = "none";
+    }
+
+    volIcon.addEventListener("click", expandVol, false);
+
+    function expandVol() {
+      homeDrop.style.display = "none";
+      volDrop.style.display = "block";
+      resDrop.style.display = "none";
+    }
+
+    resIcon.addEventListener("click", expandRes, false);
+
+    function expandRes() {
+      homeDrop.style.display = "none";
+      volDrop.style.display = "none";
+      resDrop.style.display = "block";
+    }
+
+    function changePic() {
+      pic++;
+      if (pic==1) {
+        mySlideshow.style.backgroundImage = "url('chair.jpg')";
+      }
+      if (pic==2) {
+        mySlideshow.style.backgroundImage = "url('chess.jpg')";
+      }
+      if (pic==3) {
+        mySlideshow.style.backgroundImage = "url('smile.jpg')";
+        pic=0;
+      }
+    }
+
+    function changePicHome() {
+      picHome++;
+      if (picHome==1) {
+        homeSlide.src = 'home1.jpg';
+      }
+      if (picHome==2) {
+        homeSlide.src = 'home2.jpg';
+      }
+      if (picHome==3) {
+        homeSlide.src = 'home3.jpg';
+      }
+      if (picHome==4) {
+        homeSlide.src = 'home4.jpg';
+        picHome=0;
+      }
+    }
+
+    </script>
+  </body>
+</html>
