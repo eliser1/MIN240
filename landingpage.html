@@ -119,7 +119,7 @@ button {
     <div id="middle">
       <div id="description">Residents is a free service that helps connect users to nursing homes around the area. This service acts as the third party between potential visitors and the nursing homes, and can help to ease the process of visiting. With visiting hours, location-based searching, and information about residents, Residents hopes to bring generations together and reduce the risk of nursing home related depression.
         <br>
-          <button type="button" class="btn">Residents</button>
+          <button type="button" class="btn" id="linkto">Residents</button>
       </div>
         <div class="container">
           <div class="row">
@@ -344,7 +344,16 @@ button {
     var pic
     = 1;
 
+    var myButton
+    = document.querySelector("#linkto");
+
     mySlideshow.addEventListener("click", changePic, false);
+
+    myButton.addEventListener("click", goTo, false);
+
+    function goTo() {
+      window.location.href = "final.html";
+    }
 
     function changePic() {
       pic++;
