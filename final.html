@@ -107,8 +107,129 @@
   #voldd {
     display: none;
   }
+  #volzip {
+    width: 95%;
+    border: 2px solid antiquewhite;
+    padding: 1%;
+    text-align: left;
+    color: #4e4656;
+    width: 100%;
+    background-color: antiquewhite;
+    margin-left: 4%;
+    margin-bottom: 1%;
+  }
+  #volsearch {
+    text-align: center;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    color: #4e4656;
+    border: 2px solid antiquewhite;
+    line-height: normal;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    line-height: 36.64px;
+  }
+  #volsearch:hover {
+    background-color: #4e4656;
+    color: antiquewhite;
+    transition: 1s all;
+  }
   #resdd {
     display: none;
+  }
+  .row {
+    margin: 0 auto;
+  }
+  #volsearchdd {
+    display: none;
+    margin: 2.5%;
+  }
+  .homes {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 1%;
+  }
+  .homesdes {
+    text-align: center;
+    margin-top: 1%;
+  }
+  .select {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid antiquewhite;
+    width: 25%;
+    margin: auto;
+  }
+  .select:hover {
+    background-color: antiquewhite;
+    color: #4e4656;
+    transition: 1s all;
+  }
+  #foundhomes {
+    font-size: 2em;
+    text-align: center;
+  }
+  #calendar {
+    margin: auto;
+    display: none;
+    }
+  ul {
+      list-style-type: none;
+    }
+  .month {
+    padding: 70px 25px;
+    width: 100%;
+    background-color: antiquewhite;
+    text-align: center;
+  }
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  .month ul li {
+    color: #4e4656;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#A596B5;
+  }
+  .weekdays li {
+    display: inline-block;
+    width: 13.5%;
+    color: antiquewhite;
+    text-align: center;
+  }
+  .days {
+    padding: 10px 0;
+    background: antiquewhite;
+    margin: 0;
+  }
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.5%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #4e4656;
+  }
+  .days li:hover {
+    background: #4e4656;
+    color: antiquewhite !important;
+    transition: 1s all;
   }
   </style>
   <body>
@@ -156,11 +277,87 @@
           <br><input id="passIn" class="signin" type="password" placeholder="password">
           <div id="signinbtn" class="signin">sign in</div>
         </div>
-      <div id="voldd">
-        Lorem ipsum dolor est
+      </div>
+      <div id="voldd" class="row">
+          <div class="col-9">
+            <input id="volzip" placeholder="search your city or zip code">
+          </div>
+          <div id="volsearch" class="col-2">
+            search
+          </div>
+        <div id="volsearchdd">
+          <p id="foundhomes">There are 3 homes in your area.</p>
+          <br>
+          <img src="nursing1.jpg" class="homes">
+          <p class="homesdes">Three Rivers Nursing Home</p>
+          <p class="homesdes">4642 Harrison Ave, Harrison OH</p>
+          <p id="sel1" class="select">select</p>
+          <img src="nursing2.jpg" class="homes">
+          <br><p class="homesdes">Greenbrier Nursing Center</p>
+          <p class="homesdes">8293 West Rd, Harrison OH</p>
+          <p id="sel2" class="select">select</p>
+          <img src="nursing3.jpg" class="homes">
+          <br><p class="homesdes">Seven Hills Nursing Home</p>
+          <p class="homesdes">49022 Campbell Rd, Harrison OH</p>
+          <p id="sel3" class="select">select</p>
+        </div>
+        <div id="calendar">
+          <div class="month">
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>May<br>2019</li>
+            </ul>
+          </div>
+
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+
+          <ul class="days">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
+        </div>
+       </div>
       </div>
       <div id="resdd">
-        Lorem ipsum dolor est
+
       </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -201,6 +398,26 @@
     var signUpBtn
     = document.querySelector("#signupbtn");
 
+    var volSearch
+    = document.querySelector("#volsearch");
+
+    var volSearchDd
+    = document.querySelector("#volsearchdd");
+
+    var mySelect1
+    = document.querySelector("#sel1");
+
+    var mySelect2
+    = document.querySelector("#sel2");
+
+    var mySelect3
+    = document.querySelector("#sel3");
+
+    var myCal
+    = document.querySelector("#calendar");
+
+    volSearch.addEventListener("click", expandVolSearch, false);
+
     mySlideshow.addEventListener("click", changePic, false);
 
     homeSlide.addEventListener("click", changePicHome, false);
@@ -208,6 +425,17 @@
     homeIcon.addEventListener("click", expandHome, false);
 
     signUpBtn.addEventListener("click", alertThank, false);
+
+    mySelect1.addEventListener("click", showCal, false);
+
+    mySelect2.addEventListener("click", showCal, false);
+
+    mySelect3.addEventListener("click", showCal, false);
+
+    function showCal() {
+      myCal.style.display = "block";
+      volSearchDd.style.display = "none";
+    }
 
     function alertThank() {
       alert("Thank you!")
@@ -223,16 +451,21 @@
 
     function expandVol() {
       homeDrop.style.display = "none";
-      volDrop.style.display = "block";
+      volDrop.style.display = "flex";
       resDrop.style.display = "none";
     }
 
     resIcon.addEventListener("click", expandRes, false);
 
+    function expandVolSearch() {
+      volSearchDd.style.display = "block";
+      myCal.style.display = "none";
+    }
+
     function expandRes() {
       homeDrop.style.display = "none";
       volDrop.style.display = "none";
-      resDrop.style.display = "block";
+      resDrop.style.display = "flex";
     }
 
     function changePic() {
