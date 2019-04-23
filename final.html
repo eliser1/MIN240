@@ -166,6 +166,9 @@
     color: #4e4656;
     transition: 1s all;
   }
+  #selone {
+    text-align: center;
+  }
   #foundhomes {
     font-size: 2em;
     text-align: center;
@@ -287,6 +290,7 @@
           </div>
         <div id="volsearchdd">
           <p id="foundhomes">There are 3 homes in your area.</p>
+          <p id="selone">Select a home to schedule your visit.</p>
           <br>
           <img src="nursing1.jpg" class="homes">
           <p class="homesdes">Three Rivers Nursing Home</p>
@@ -453,6 +457,7 @@
       homeDrop.style.display = "none";
       volDrop.style.display = "flex";
       resDrop.style.display = "none";
+      volSearchDd.style.display = "none";
     }
 
     resIcon.addEventListener("click", expandRes, false);
