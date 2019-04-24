@@ -124,7 +124,31 @@
     margin-bottom: 1%;
     height: 37.5px;
   }
+  #reszip {
+    border: 2px solid antiquewhite;
+    padding: 1%;
+    text-align: left;
+    color: #4e4656;
+    width: 100%;
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+    height: 37.5px;
+  }
   #volsearch {
+    text-align: center;
+    border-radius: 20px;
+    background-color: antiquewhite;
+    color: #4e4656;
+    border: 2px solid antiquewhite;
+    line-height: normal;
+    margin-bottom: 1%;
+    margin-left: auto;
+    margin-right: 15px;
+    line-height: 36.64px;
+  }
+  #ressearch {
     text-align: center;
     border-radius: 20px;
     background-color: antiquewhite;
@@ -141,6 +165,11 @@
     color: antiquewhite;
     transition: 1s all;
   }
+  #ressearch:hover {
+    background-color: #4e4656;
+    color: antiquewhite;
+    transition: 1s all;
+  }
   #resdd {
     display: none;
   }
@@ -150,6 +179,37 @@
   #volsearchdd {
     display: none;
     margin: 2.5%;
+  }
+  #ressearchdd {
+    display: none;
+    margin: 2.5%;
+  }
+  #resdd1 {
+    display: none;
+  }
+  #resdd2 {
+    display: none;
+  }
+  #resdd3 {
+    display: none;
+  }
+  #return {
+    display: none;
+  }
+  #trnh {
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  #gnc {
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  #shnh {
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  #res1 {
+
   }
   .homes {
     width: 50%;
@@ -176,9 +236,19 @@
   #selone {
     text-align: center;
   }
+  #reselone {
+    text-align: center;
+  }
   #foundhomes {
     font-size: 2em;
     text-align: center;
+  }
+  #resfoundhomes {
+    font-size: 2em;
+    text-align: center;
+  }
+  #resel3 {
+    margin-bottom: 1%;
   }
   #calendar {
     margin-left: auto;
@@ -370,8 +440,59 @@
         </div>
        </div>
       </div>
-      <div id="resdd">
-
+      <div id="resdd" class="row">
+          <div id="reszippar" class="col-9">
+            <input id="reszip" placeholder="search your city or zip code">
+          </div>
+          <div id="ressearch" class="col-2">
+            search
+          </div>
+        <div id="ressearchdd">
+          <p id="resfoundhomes">There are 3 homes in your area.</p>
+          <p id="reselone">Select a home to view residents.</p>
+          <br>
+          <img src="nursing1.jpg" class="homes">
+          <p class="homesdes">Three Rivers Nursing Home</p>
+          <p class="homesdes">4642 Harrison Ave, Harrison OH</p>
+          <p id="resel1" class="select">select</p>
+          <img src="nursing2.jpg" class="homes">
+          <br><p class="homesdes">Greenbrier Nursing Center</p>
+          <p class="homesdes">8293 West Rd, Harrison OH</p>
+          <p id="resel2" class="select">select</p>
+          <img src="nursing3.jpg" class="homes">
+          <br><p class="homesdes">Seven Hills Nursing Home</p>
+          <p class="homesdes">49022 Campbell Rd, Harrison OH</p>
+          <p id="resel3" class="select">select</p>
+        </div>
+        <div id="resdd1" class="row">
+          <div id="trnh" class="col-12">
+            You are viewing Three Rivers Nursing Home residents.
+          </div>
+          <img src="res1.jpeg" class="col-6">
+          <div id="res1" class="col-6"></div>
+          <img src="res2.jpeg" class="col-6">
+          <div id="res2" class="col-6"></div>
+        </div>
+        <div id="resdd2" class="row">
+          <div id="gnc" class="col-12">
+            You are viewing Greenbrier Nursing Center residents.
+          </div>
+          <img src="res3.jpeg" class="col-6">
+          <div id="res3" class="col-6"></div>
+          <img src="res4.jpeg" class="col-6">
+          <div id="res4" class="col-6"></div>
+        </div>
+        <div id="resdd3" class="row">
+          <div id="shnh" class="col-12">
+            You are viewing Seven Hills Nursing Home residents.
+          </div>
+          <img src="res5.jpeg" class="col-6">
+          <div id="res5" class="col-6"></div>
+          <img src="res6.jpeg" class="col-6">
+          <div id="res6" class="col-6"></div>
+        </div>
+        <div id="return">
+          return
       </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -418,6 +539,9 @@
     var volSearchDd
     = document.querySelector("#volsearchdd");
 
+    var resSearchDd
+    = document.querySelector("#ressearchdd")
+
     var mySelect1
     = document.querySelector("#sel1");
 
@@ -427,8 +551,40 @@
     var mySelect3
     = document.querySelector("#sel3");
 
+    var myResSelect1
+    = document.querySelector("#resel1");
+
+    var myResSelect2
+    = document.querySelector("#resel2");
+
+    var myResSelect3
+    = document.querySelector("#resel3");
+
     var myCal
     = document.querySelector("#calendar");
+
+    var resSearch
+    = document.querySelector("#ressearch");
+
+    var resDd1
+    = document.querySelector("#resdd1");
+
+    var resDd2
+    = document.querySelector("#resdd2");
+
+    var resDd3
+    = document.querySelector("#resdd3");
+
+    var myReturn
+    = document.querySelector("#return");
+
+    myResSelect1.addEventListener("click", expandRes1, false);
+
+    myReturn.addEventListener("click", returnTo, false);
+
+    myResSelect2.addEventListener("click", expandRes2, false);
+
+    myResSelect3.addEventListener("click", expandRes3, false);
 
     volSearch.addEventListener("click", expandVolSearch, false);
 
@@ -445,6 +601,32 @@
     mySelect2.addEventListener("click", showCal, false);
 
     mySelect3.addEventListener("click", showCal, false);
+
+    function expandRes1() {
+      resDd1.style.display = "flex";
+      resSearchDd.style.display = "none";
+      myReturn.style.display = "block";
+    }
+
+    function expandRes2() {
+      resDd2.style.display = "flex";
+      resSearchDd.style.display = "none";
+      myReturn.style.display = "block";
+    }
+
+    function expandRes3() {
+      resDd3.style.display = "flex";
+      resSearchDd.style.display = "none";
+      myReturn.style.display = "block";
+    }
+
+    function returnTo() {
+      resDd1.style.display = "none";
+      resDd2.style.display = "none";
+      resDd3.style.display = "none";
+      resSearchDd.style.display = "block";
+      myReturn.style.display = "none";
+    }
 
     function showCal() {
       myCal.style.display = "block";
@@ -463,6 +645,8 @@
 
     volIcon.addEventListener("click", expandVol, false);
 
+    resSearch.addEventListener("click", expandResSearch, false);
+
     function expandVol() {
       homeDrop.style.display = "none";
       volDrop.style.display = "flex";
@@ -475,6 +659,10 @@
     function expandVolSearch() {
       volSearchDd.style.display = "block";
       myCal.style.display = "none";
+    }
+
+    function expandResSearch() {
+      resSearchDd.style.display = "block";
     }
 
     function expandRes() {
