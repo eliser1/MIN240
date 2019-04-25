@@ -264,10 +264,12 @@
   }
   .nursing {
     height: 50vmin;
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
   .nursdes {
-    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-top: 5%;
   }
   #return {
     text-align: center;
@@ -276,8 +278,8 @@
     width: 25%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
     cursor: pointer;
   }
   #return:hover {
@@ -310,19 +312,24 @@
   #name {
     width: 95%;
     background-color: antiquewhite;
-    margin: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
   }
   #email1 {
     width: 95%;
     background-color: antiquewhite;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    margin-bottom: 1%;
   }
   #thisdescrip {
     width: 95%;
-    height: 50%;
     background-color: antiquewhite;
-    margin: 2.5%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    margin-bottom: 1%;
   }
   #submitbtn {
     text-align: center;
@@ -346,6 +353,9 @@
     margin-top: auto;
     margin-bottom: 1%;
     display: none;
+    }
+  #signuptext {
+    text-align: center;
     }
   ul {
       list-style-type: none;
@@ -479,6 +489,9 @@
           <p id="sel3" class="select">select</p>
         </div>
         <div id="calendar">
+          <p id="signuptext">
+            Select a date below to schedule your visit.
+          </p>
           <div class="month">
             <ul>
               <li class="prev">&#10094;</li>
@@ -617,15 +630,25 @@
         <div id="return">
           return
         </div>
-        <div id="isthisyou">
-          <p id="thisyoutext">
-            Are you this resident? Submit a request for updated information! Fill out the brief form below to send information to one of our developers.
-          </p>
-          <input id="name" placeholder="full name">
-          <input id="email1" placeholder="email address">
-          <textarea wrap="hard" id="thisdescrip" placeholder="submit a brief description to send to our developers"></textarea>
-          <div id="submitbtn">
-            submit
+        <div id="isthisyou" class="row">
+          <div class="col-12">
+            <p id="thisyoutext">
+              Are you this resident? Submit a request for updated information! Fill out the brief form below to send information to one of our developers.
+            </p>
+          </div>
+          <div class="col-12">
+            <input id="name" placeholder="full name">
+          </div>
+          <div class="col-12">
+            <input id="email1" placeholder="email address">
+          </div>
+          <div class="col-12">
+            <textarea wrap="hard" id="thisdescrip" placeholder="submit a brief description to send to our developers"></textarea>
+          </div>
+          <div class="col-12">
+            <div id="submitbtn">
+              submit
+            </div>
           </div>
         </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -778,7 +801,7 @@
     submitBtn.addEventListener("click", returnToThank, false);
 
     function expandThisYou() {
-      isThisYou.style.display = "block";
+      isThisYou.style.display = "flex";
       resDd1.style.display = "none";
       resDd2.style.display = "none";
       resDd3.style.display = "none";
@@ -856,6 +879,7 @@
       volDrop.style.display = "flex";
       resDrop.style.display = "none";
       volSearchDd.style.display = "none";
+      myCal.style.display = "none";
     }
 
     resIcon.addEventListener("click", expandRes, false);
