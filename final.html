@@ -145,7 +145,6 @@
     background-color: antiquewhite;
     color: #4e4656;
     border: 2px solid antiquewhite;
-    line-height: normal;
     margin-bottom: 1%;
     margin-left: auto;
     margin-right: 15px;
@@ -158,12 +157,15 @@
     background-color: antiquewhite;
     color: #4e4656;
     border: 2px solid antiquewhite;
-    line-height: normal;
     margin-bottom: 1%;
     margin-left: auto;
     margin-right: 15px;
     line-height: 36.64px;
     cursor: pointer;
+  }
+  span {
+    text-align: center;
+    width: 100%;
   }
   #vol{
     cursor: pointer;
@@ -551,7 +553,7 @@
             <input id="reszip" placeholder="search your city or zip code">
           </div>
           <div id="ressearch" class="col-2">
-            search
+            <span>search</span>
           </div>
         <div id="ressearchdd">
           <p id="resfoundhomes">There are 3 homes in your area.</p>
@@ -903,6 +905,8 @@
       resSearchDd.style.display = "none";
       myReturn.style.display = "none";
       isThisYou.style.display = "none";
+      resSearch.style.display = "flex";
+      resZip.style.display = "flex";
     }
 
     function changePic() {
