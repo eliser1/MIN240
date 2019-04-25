@@ -11,6 +11,7 @@
     background-color: #4e4656;
     font-family: 'Raleway', sans-serif;
     color: antiquewhite;
+    user-select: none;
   }
   #top {
     height: 100vh;
@@ -89,6 +90,7 @@
     margin-left: auto;
     margin-right: auto;
     color: rgb(78, 70, 86);
+    cursor: pointer;
   }
   #signupbtn:hover {
     background-color: #4e4656;
@@ -103,6 +105,7 @@
     margin-right: auto;
     margin-bottom: 5%;
     color: rgb(78, 70, 86);
+    cursor: pointer;
   }
   #signinbtn:hover {
     background-color: #4e4656;
@@ -147,6 +150,7 @@
     margin-left: auto;
     margin-right: 15px;
     line-height: 36.64px;
+    cursor: pointer;
   }
   #ressearch {
     text-align: center;
@@ -159,6 +163,16 @@
     margin-left: auto;
     margin-right: 15px;
     line-height: 36.64px;
+    cursor: pointer;
+  }
+  #vol{
+    cursor: pointer;
+  }
+  #res {
+    cursor: pointer;
+  }
+  #home {
+    cursor: pointer;
   }
   #volsearch:hover {
     background-color: #4e4656;
@@ -208,9 +222,6 @@
     text-align: center;
     margin-bottom: 1%;
   }
-  #res1 {
-
-  }
   .homes {
     width: 50%;
     margin-left: 25%;
@@ -227,6 +238,7 @@
     border: 1px solid antiquewhite;
     width: 25%;
     margin: auto;
+    cursor: pointer;
   }
   .select:hover {
     background-color: antiquewhite;
@@ -249,6 +261,83 @@
   }
   #resel3 {
     margin-bottom: 1%;
+  }
+  .nursing {
+    height: 50vmin;
+    margin-top: 10%;
+  }
+  .nursdes {
+    margin-top: 10%;
+  }
+  #return {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid antiquewhite;
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+  #return:hover {
+    background-color: antiquewhite;
+    color: #4e4656;
+    transition: 1s all;
+  }
+  .isthisyou {
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid antiquewhite;
+    width: 30%;
+    margin-top: 5%;
+    cursor: pointer;
+  }
+  .isthisyou:hover {
+    background-color: antiquewhite;
+    color: #4e4656;
+    transition: 1s all;
+  }
+  #isthisyou {
+    display: none;
+  }
+  #thisyoutext {
+    text-align: center;
+    margin: auto;
+  }
+  #name {
+    width: 95%;
+    background-color: antiquewhite;
+    margin: 2.5%;
+  }
+  #email {
+    width: 95%;
+    background-color: antiquewhite;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+  #thisdescrip {
+    width: 95%;
+    height: 50%;
+    background-color: antiquewhite;
+    margin: 2.5%;
+  }
+  #submitbtn {
+    text-align: center;
+    border-radius: 20px;
+    border: 1px solid antiquewhite;
+    width: 25%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    cursor: pointer;
+  }
+  #submitbtn:hover {
+    background-color: antiquewhite;
+    color: #4e4656;
+    transition: 1s all;
   }
   #calendar {
     margin-left: auto;
@@ -279,10 +368,12 @@
   .month .prev {
     float: left;
     padding-top: 10px;
+    cursor: pointer;
   }
   .month .next {
     float: right;
     padding-top: 10px;
+    cursor: pointer;
   }
   .weekdays {
     margin: 0;
@@ -299,6 +390,7 @@
     padding: 10px 0;
     background: antiquewhite;
     margin: 0;
+    cursor: pointer;
   }
   .days li {
     list-style-type: none;
@@ -468,32 +560,73 @@
           <div id="trnh" class="col-12">
             You are viewing Three Rivers Nursing Home residents.
           </div>
-          <img src="res1.jpeg" class="col-6">
-          <div id="res1" class="col-6"></div>
-          <img src="res2.jpeg" class="col-6">
-          <div id="res2" class="col-6"></div>
+          <img src="res1.jpeg" class="col-6 nursing">
+          <div id="res1" class="col-6 nursdes">
+            When Karen was a teenager, she worked a job at a local photo shop. She developed pictures and learned countless stories about customers based upon what they would bring in to develop. Now, she tells these stories to anyone she sees. She loves to tell stories, especially over some coffee.
+              <div id="isthisyou1" class="isthisyou">
+                Is this you?
+              </div>
+          </div>
+          <img src="res2.jpeg" class="col-6 nursing">
+          <div id="res2" class="col-6 nursdes">
+            Bert spent most of his life as a consctruction worker, leaving him partially deaf in his left ear. Despite this, he knows how to be a good listener and have a good laugh. Bert loves to tell and hear jokes, always adding jokes from his visitors to his repertoire.
+              <div id="isthisyou2" class="isthisyou">
+                Is this you?
+              </div>
+          </div>
         </div>
         <div id="resdd2" class="row">
           <div id="gnc" class="col-12">
             You are viewing Greenbrier Nursing Center residents.
           </div>
-          <img src="res3.jpeg" class="col-6">
-          <div id="res3" class="col-6"></div>
-          <img src="res4.jpeg" class="col-6">
-          <div id="res4" class="col-6"></div>
+          <img src="res3.jpeg" class="col-6 nursing">
+          <div id="res3" class="col-6 nursdes">
+            Joe is a retired firefighter. He prides himself on his volunteer work, and knowing how many people he helped to save comforts him. While Joe is a quiet man, he enjoys playing card games.
+              <div id="isthisyou3" class="isthisyou">
+                Is this you?
+              </div>
+          </div>
+          <img src="res4.jpeg" class="col-6 nursing">
+          <div id="res4" class="col-6 nursdes">
+            Luda's parents came to the States from Mexico, and she loves to talk about their culture. She loves to find people who can speak Spanish so that she can keep her skills fresh and honor the memory of her parents. She loves to drink hot chocolate with cinnamon and dancing.
+              <div id="isthisyou4" class="isthisyou">
+                Is this you?
+              </div>
+          </div>
         </div>
         <div id="resdd3" class="row">
           <div id="shnh" class="col-12">
             You are viewing Seven Hills Nursing Home residents.
           </div>
-          <img src="res5.jpeg" class="col-6">
-          <div id="res5" class="col-6"></div>
-          <img src="res6.jpeg" class="col-6">
-          <div id="res6" class="col-6"></div>
+          <img src="res5.jpeg" class="col-6 nursing">
+          <div id="res5" class="col-6 nursdes">
+            When George moved to the tri-state area, he had nothing but the shirt on his back and his wallet. He travelled the US much of his young adult life before settling down. He loves to talk about his many adventures throughout the states, and is even more talkative when given Kit-Kats.
+              <div id="isthisyou5" class="isthisyou">
+                Is this you?
+              </div>
+          </div>
+          <img src="res6.jpeg" class="col-6 nursing">
+          <div id="res6" class="col-6 nursdes">
+            Bernice worked at a coffee shop most of her life, and can still make a great latte. She saw many different kinds of people working her job, and loves to hear about people's lives. She is almost a walking repertoire of stories ranging from each generation, all with different meanings and motives behind them.
+              <div id="isthisyou6" class="isthisyou">
+                Is this you?
+              </div>
+          </div>
         </div>
         <div id="return">
           return
-      </div>
+        </div>
+        <div id="isthisyou">
+          <p id="thisyoutext">
+            Are you this resident? Submit a request for updated information! Fill out the brief form below to send information to one of our developers.
+          </p>
+          <input id="name" placeholder="full name">
+          <input id="email" placeholder="email address">
+          <textarea wrap="hard" id="thisdescrip" placeholder="submit a brief description to send to our developers"></textarea>
+          <div id="submitbtn">
+            submit
+          </div>
+        </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
@@ -566,6 +699,9 @@
     var resSearch
     = document.querySelector("#ressearch");
 
+    var resZip
+    = document.querySelector("#reszippar");
+
     var resDd1
     = document.querySelector("#resdd1");
 
@@ -577,6 +713,42 @@
 
     var myReturn
     = document.querySelector("#return");
+
+    var thisYouBtn1
+    = document.querySelector("#isthisyou1");
+
+    var thisYouBtn2
+    = document.querySelector("#isthisyou2");
+
+    var thisYouBtn3
+    = document.querySelector("#isthisyou3");
+
+    var thisYouBtn4
+    = document.querySelector("#isthisyou4");
+
+    var thisYouBtn5
+    = document.querySelector("#isthisyou5");
+
+    var thisYouBtn6
+    = document.querySelector("#isthisyou6");
+
+    var isThisYou
+    = document.querySelector("#isthisyou");
+
+    var submitBtn
+    = document.querySelector("#submitbtn");
+
+    thisYouBtn1.addEventListener("click", expandThisYou, false);
+
+    thisYouBtn2.addEventListener("click", expandThisYou, false);
+
+    thisYouBtn3.addEventListener("click", expandThisYou, false);
+
+    thisYouBtn4.addEventListener("click", expandThisYou, false);
+
+    thisYouBtn5.addEventListener("click", expandThisYou, false);
+
+    thisYouBtn6.addEventListener("click", expandThisYou, false);
 
     myResSelect1.addEventListener("click", expandRes1, false);
 
@@ -602,22 +774,38 @@
 
     mySelect3.addEventListener("click", showCal, false);
 
+    submitBtn.addEventListener("click", returnToThank, false);
+
+    function expandThisYou() {
+      isThisYou.style.display = "block";
+      resDd1.style.display = "none";
+      resDd2.style.display = "none";
+      resDd3.style.display = "none";
+      resSearch.style.display = "none";
+      resZip.style.display = "none";
+    }
     function expandRes1() {
       resDd1.style.display = "flex";
       resSearchDd.style.display = "none";
       myReturn.style.display = "block";
+      resSearch.style.display = "none";
+      resZip.style.display = "none";
     }
 
     function expandRes2() {
       resDd2.style.display = "flex";
       resSearchDd.style.display = "none";
       myReturn.style.display = "block";
+      resSearch.style.display = "none";
+      resZip.style.display = "none";
     }
 
     function expandRes3() {
       resDd3.style.display = "flex";
       resSearchDd.style.display = "none";
       myReturn.style.display = "block";
+      resSearch.style.display = "none";
+      resZip.style.display = "none";
     }
 
     function returnTo() {
@@ -626,6 +814,9 @@
       resDd3.style.display = "none";
       resSearchDd.style.display = "block";
       myReturn.style.display = "none";
+      resSearch.style.display = "flex";
+      resZip.style.display = "flex";
+      isThisYou.style.display = "none";
     }
 
     function showCal() {
@@ -633,8 +824,20 @@
       volSearchDd.style.display = "none";
     }
 
+    function returnToThank() {
+      resDd1.style.display = "none";
+      resDd2.style.display = "none";
+      resDd3.style.display = "none";
+      resSearchDd.style.display = "block";
+      myReturn.style.display = "none";
+      resSearch.style.display = "flex";
+      resZip.style.display = "flex";
+      isThisYou.style.display = "none";
+      alert("Thank you for your submission. We will get back to you as soon as we can!");
+    }
+
     function alertThank() {
-      alert("Thank you!")
+      alert("Thank you!");
     }
 
     function expandHome() {
@@ -669,6 +872,12 @@
       homeDrop.style.display = "none";
       volDrop.style.display = "none";
       resDrop.style.display = "flex";
+      resDd1.style.display = "none";
+      resDd2.style.display = "none";
+      resDd3.style.display = "none";
+      resSearchDd.style.display = "none";
+      myReturn.style.display = "none";
+      isThisYou.style.display = "none";
     }
 
     function changePic() {
